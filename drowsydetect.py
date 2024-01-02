@@ -60,13 +60,13 @@ while True:
                 landmarks = predictor(gray, face)
                 landmarks = face_utils.shape_to_np(landmarks)
 
-                #The numbers are actually the landmarks which will show eye
+               
                 left_blink = blinked(landmarks[36],landmarks[37], 
                 landmarks[38], landmarks[41], landmarks[40], landmarks[39])
                 right_blink = blinked(landmarks[42],landmarks[43], 
                 landmarks[44], landmarks[47], landmarks[46], landmarks[45])
 
-                #Now judge what to do for the eye blinks
+                
                 if(left_blink==0 or right_blink==0):
                         sleep+=1
                         drowsy=0
